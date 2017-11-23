@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+ - "node"
 deploy:
   provider: script
   skip_cleanup: true
@@ -6,4 +8,4 @@ deploy:
   on:
     branch: master
 script:
-  - npm start
+  - deploy
