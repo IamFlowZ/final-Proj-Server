@@ -7,5 +7,7 @@ deploy:
   script: ./deploy.sh
   on:
     branch: master
+before_script:
+  - npm install cors
 script:
   - npm start
