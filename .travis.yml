@@ -8,4 +8,4 @@ deploy:
   on:
     branch: master
 script:
-  - deploy.sh
+  - npm start
