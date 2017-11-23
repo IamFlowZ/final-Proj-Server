@@ -6,4 +6,4 @@ deploy:
   on:
     branch: master
 script:
-  - npm test
+  - npm start
