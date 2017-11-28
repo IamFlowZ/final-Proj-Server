@@ -13,11 +13,12 @@ const users = [
 ];    
    
 router.get('/users', function (req, res, next) {
+    console.log("recieved request user array call");
     res.json(users);
 });
 
 router.get('/users/:id', function (req, res, next) {
-  console.log("recieved request");
+    console.log("recieved request user login request");
     var id = parseInt(req.params['id']);
     var user = findUser(id);
     if (user) {
@@ -35,11 +36,12 @@ router.post('/users', function(req, res, next) {
   console.log(newUser);
   if (newUser.userId != null) {
     var user = findUser(newUser.userId);
-    user.lobbyId = body.lobbyId;
-    user.lobbyScore = body.lobbyScore;
+    console.log("updating user");
+    user.lobbyId = newUser.lobbyId;
+    user.lobbyScore = newUser.lobbyScore;
   }
   else {
-    console.log("user search unsucessful");
+    console.log("user search unsucessful, adding a new user");
     newUser.userId = ++users.length;
     users.push(newUser);
   }
