@@ -13,12 +13,12 @@ const users = [
 ];    
    
 router.get('/users', function (req, res, next) {
-    console.log("recieved request user array call");
+    console.log("recieved request: user array");
     res.json(users);
 });
 
 router.get('/users/:id', function (req, res, next) {
-    console.log("recieved request user login request");
+    console.log("recieved request: user login");
     var id = parseInt(req.params['id']);
     var user = findUser(id);
     if (user) {

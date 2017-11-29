@@ -9,12 +9,12 @@ const lobbies = [
 ]
 
 router.get('/lobbies', function (req, res, next) {
-    console.log("recieved request lobby array call");
+    console.log("recieved request: lobby array ");
     res.json(lobbies);
 });
 
 router.get('/lobbies/:id', function (req, res, next) {
-    console.log("recieved request user login request");
+    console.log("recieved request: lobby instance");
     var id = parseInt(req.params['id']);
     var lobby = findlobby(id);
     if (lobby) {
