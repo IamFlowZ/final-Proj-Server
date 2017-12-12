@@ -4,12 +4,12 @@ var router = express.Router();
 
 
 const users = [
-  { userId: 1, lobbyId: [1,2], lobbyScore: [1,4] },
-  { userId: 2, lobbyId: [1], lobbyScore: [2] },  
-  { userId: 3, lobbyId: [1,3], lobbyScore: [3,4] }, 
-  { userId: 4, lobbyId: [1,2], lobbyScore: [4,1] }, 
-  { userId: 5, lobbyId: [2,3], lobbyScore: [2,2] },
-  { userId: 6, lobbyId: [2], lobbyScore: [3] }
+  { userId: 1, lobbyId: [1,2], lobbyScore: [1,4], lobbyPos: [3,1] },
+  { userId: 2, lobbyId: [1], lobbyScore: [2], lobbyPos: [1]},  
+  { userId: 3, lobbyId: [1,3], lobbyScore: [3,4], lobbyPos: [3,1] }, 
+  { userId: 4, lobbyId: [1,2], lobbyScore: [4,1], lobbyPos: [3,1] }, 
+  { userId: 5, lobbyId: [2,3,4], lobbyScore: [2,2], lobbyPos: [3,1,4] },
+  { userId: 6, lobbyId: [2], lobbyScore: [3], lobbyPos: [1] }
 ];    
    
 router.get('/users', function (req, res, next) {
