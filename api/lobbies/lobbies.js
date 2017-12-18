@@ -3,9 +3,9 @@ var express = require("express");
 var router = express.Router();
 
 const lobbies = [
-    {lobbyId: 1, userIds: [1,2,3,4], userScores: [2,1,4,3], prompts: ["cat", "dog", "firetruck"], gameTimer: 45},
-    {lobbyId: 2, userIds: [4,5,6,1], userScores: [4,3,1,2], prompts: ["cat", "dog", "firetruck"], gameTimer: 90},
-    {lobbyId: 3, userIds: [3,5], userScores: [4,2], prompts: ["cat", "dog"], gameTimer: 60}
+    {lobbyName: "test1", lobbyId: 1, userIds: [1,2,3,4], userScores: [2,1,4,3], prompts: ["cat", "dog", "firetruck"], gameTimer: 45},
+    {lobbyName: "test2", lobbyId: 2, userIds: [4,5,6,1], userScores: [4,3,1,2], prompts: ["cat", "dog", "firetruck"], gameTimer: 90},
+    {lobbyName: "test3", lobbyId: 3, userIds: [3,5], userScores: [4,2], prompts: ["cat", "dog"], gameTimer: 60}
 ]
 
 router.get('/lobbies', function (req, res, next) {
